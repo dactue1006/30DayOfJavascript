@@ -1,0 +1,80 @@
+html, body{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6O60Myqskc3ECowjKnX9u5PYiJ27SRjEOGHHhe1xbbIsMQ4yB);
+    background-size: cover;
+}
+.clock{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.clock-face{
+    background: url(https://cssanimation.rocks/images/posts/clocks/ios_clock.svg) no-repeat center;
+    background-size: 88%;
+    border: 10px   #0b2479 solid;
+    border-radius: 50%;
+    width: 20em;
+    height: 20em;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 5px 5px #0b2479;
+}
+.clock-face:after {
+    background: #000;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 48.8%;
+    top: 42.5%;
+    width: 23px;
+    height: 23px;
+    z-index: 10;
+}
+
+.hand{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotate(90deg);
+    transition: all 0.15s;
+}
+.hour-hand {
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    height: 80px;
+    left: 49.3%;
+    position: absolute;
+    top: 31.5%;
+    transform-origin: 50% 100%;
+    /*transform: rotate(90deg);*/
+    width: 13px;
+}
+
+.minute-hand {
+    background: #1a1a1a;
+    border-radius: 5px;
+    height: 105px;
+    left: 49.5%;
+    position: absolute;
+    top: 28%;
+    transform-origin: 50% 100%;
+    /*transform: rotate(180deg);*/
+    width: 8px;
+}
+
+.second-hand {
+    background: #0d0d0d;
+    border-radius: 5px;
+    height: 180px;
+    left: 49.6%;
+    position: absolute;
+    top: 21.5%;
+    transform-origin: 50% 80%;
+    /*transform: rotate(45deg);*/
+    width: 5px;
+}
